@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{027363A9-7661-4648-BA0D-9FA2243A8A63}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Angband</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;src/win;src/win/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>zlib.lib;libpng.lib;msimg32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\Angband\src\win\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\alloc.h" />
+    <ClInclude Include="src\angband.h" />
+    <ClInclude Include="src\attack.h" />
+    <ClInclude Include="src\birth.h" />
+    <ClInclude Include="src\buildid.h" />
+    <ClInclude Include="src\cave.h" />
+    <ClInclude Include="src\cmds.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\death.h" />
+    <ClInclude Include="src\debug.h" />
+    <ClInclude Include="src\defines.h" />
+    <ClInclude Include="src\dungeon.h" />
+    <ClInclude Include="src\effects.h" />
+    <ClInclude Include="src\externs.h" />
+    <ClInclude Include="src\files.h" />
+    <ClInclude Include="src\game-cmd.h" />
+    <ClInclude Include="src\game-event.h" />
+    <ClInclude Include="src\generate.h" />
+    <ClInclude Include="src\grafmode.h" />
+    <ClInclude Include="src\guid.h" />
+    <ClInclude Include="src\h-basic.h" />
+    <ClInclude Include="src\hint.h" />
+    <ClInclude Include="src\history.h" />
+    <ClInclude Include="src\init.h" />
+    <ClInclude Include="src\keymap.h" />
+    <ClInclude Include="src\list-effects.h" />
+    <ClInclude Include="src\list-gf-types.h" />
+    <ClInclude Include="src\list-player-flags.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\monster\constants.h" />
+    <ClInclude Include="src\monster\list-blow-effects.h" />
+    <ClInclude Include="src\monster\list-blow-methods.h" />
+    <ClInclude Include="src\monster\list-mon-flags.h" />
+    <ClInclude Include="src\monster\list-mon-spells.h" />
+    <ClInclude Include="src\monster\list-spell-effects.h" />
+    <ClInclude Include="src\monster\mon-init.h" />
+    <ClInclude Include="src\monster\mon-list.h" />
+    <ClInclude Include="src\monster\mon-lore.h" />
+    <ClInclude Include="src\monster\mon-make.h" />
+    <ClInclude Include="src\monster\mon-msg.h" />
+    <ClInclude Include="src\monster\mon-power.h" />
+    <ClInclude Include="src\monster\mon-spell.h" />
+    <ClInclude Include="src\monster\mon-timed.h" />
+    <ClInclude Include="src\monster\mon-util.h" />
+    <ClInclude Include="src\monster\monster.h" />
+    <ClInclude Include="src\object\inventory.h" />
+    <ClInclude Include="src\object\list-object-flags.h" />
+    <ClInclude Include="src\object\list-slays.h" />
+    <ClInclude Include="src\object\obj-flag.h" />
+    <ClInclude Include="src\object\obj-list.h" />
+    <ClInclude Include="src\object\object.h" />
+    <ClInclude Include="src\object\pval.h" />
+    <ClInclude Include="src\object\slays.h" />
+    <ClInclude Include="src\object\tvalsval.h" />
+    <ClInclude Include="src\option.h" />
+    <ClInclude Include="src\parser.h" />
+    <ClInclude Include="src\pathfind.h" />
+    <ClInclude Include="src\player\player.h" />
+    <ClInclude Include="src\prefs.h" />
+    <ClInclude Include="src\quest.h" />
+    <ClInclude Include="src\randname.h" />
+    <ClInclude Include="src\savefile.h" />
+    <ClInclude Include="src\spells.h" />
+    <ClInclude Include="src\squelch.h" />
+    <ClInclude Include="src\store.h" />
+    <ClInclude Include="src\target.h" />
+    <ClInclude Include="src\textui.h" />
+    <ClInclude Include="src\trap.h" />
+    <ClInclude Include="src\ui-birth.h" />
+    <ClInclude Include="src\ui-event.h" />
+    <ClInclude Include="src\ui-menu.h" />
+    <ClInclude Include="src\ui-options.h" />
+    <ClInclude Include="src\ui.h" />
+    <ClInclude Include="src\win\readdib.h" />
+    <ClInclude Include="src\win\win-menu.h" />
+    <ClInclude Include="src\win\win-term.h" />
+    <ClInclude Include="src\wizard.h" />
+    <ClInclude Include="src\z-bitflag.h" />
+    <ClInclude Include="src\z-debug.h" />
+    <ClInclude Include="src\z-file.h" />
+    <ClInclude Include="src\z-form.h" />
+    <ClInclude Include="src\z-msg-list.h" />
+    <ClInclude Include="src\z-msg.h" />
+    <ClInclude Include="src\z-quark.h" />
+    <ClInclude Include="src\z-queue.h" />
+    <ClInclude Include="src\z-rand.h" />
+    <ClInclude Include="src\z-set.h" />
+    <ClInclude Include="src\z-term.h" />
+    <ClInclude Include="src\z-textblock.h" />
+    <ClInclude Include="src\z-type.h" />
+    <ClInclude Include="src\z-util.h" />
+    <ClInclude Include="src\z-virt.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\attack.c" />
+    <ClCompile Include="src\birth.c" />
+    <ClCompile Include="src\buildid.c" />
+    <ClCompile Include="src\cave.c" />
+    <ClCompile Include="src\cmd-cave.c" />
+    <ClCompile Include="src\cmd-context.c" />
+    <ClCompile Include="src\cmd-know.c" />
+    <ClCompile Include="src\cmd-misc.c" />
+    <ClCompile Include="src\cmd-obj.c" />
+    <ClCompile Include="src\cmd-pickup.c" />
+    <ClCompile Include="src\cmd-process.c" />
+    <ClCompile Include="src\death.c" />
+    <ClCompile Include="src\debug.c" />
+    <ClCompile Include="src\dungeon.c" />
+    <ClCompile Include="src\effects.c" />
+    <ClCompile Include="src\files.c" />
+    <ClCompile Include="src\game-cmd.c" />
+    <ClCompile Include="src\game-event.c" />
+    <ClCompile Include="src\generate.c" />
+    <ClCompile Include="src\grafmode.c" />
+    <ClCompile Include="src\guid.c" />
+    <ClCompile Include="src\history.c" />
+    <ClCompile Include="src\init.c" />
+    <ClCompile Include="src\keymap.c" />
+    <ClCompile Include="src\load.c" />
+    <ClCompile Include="src\main-win.c" />
+    <ClCompile Include="src\monster\melee1.c" />
+    <ClCompile Include="src\monster\melee2.c" />
+    <ClCompile Include="src\monster\mon-init.c" />
+    <ClCompile Include="src\monster\mon-list.c" />
+    <ClCompile Include="src\monster\mon-lore.c" />
+    <ClCompile Include="src\monster\mon-make.c" />
+    <ClCompile Include="src\monster\mon-msg.c" />
+    <ClCompile Include="src\monster\mon-power.c" />
+    <ClCompile Include="src\monster\mon-spell.c" />
+    <ClCompile Include="src\monster\mon-timed.c" />
+    <ClCompile Include="src\monster\mon-util.c" />
+    <ClCompile Include="src\object\chest.c" />
+    <ClCompile Include="src\object\identify.c" />
+    <ClCompile Include="src\object\obj-desc.c" />
+    <ClCompile Include="src\object\obj-flag.c" />
+    <ClCompile Include="src\object\obj-info.c" />
+    <ClCompile Include="src\object\obj-list.c" />
+    <ClCompile Include="src\object\obj-make.c" />
+    <ClCompile Include="src\object\obj-power.c" />
+    <ClCompile Include="src\object\obj-ui.c" />
+    <ClCompile Include="src\object\obj-util.c" />
+    <ClCompile Include="src\object\pval.c" />
+    <ClCompile Include="src\object\randart.c" />
+    <ClCompile Include="src\object\slays.c" />
+    <ClCompile Include="src\option.c" />
+    <ClCompile Include="src\parser.c" />
+    <ClCompile Include="src\pathfind.c" />
+    <ClCompile Include="src\player\calcs.c" />
+    <ClCompile Include="src\player\class.c" />
+    <ClCompile Include="src\player\p-util.c" />
+    <ClCompile Include="src\player\player.c" />
+    <ClCompile Include="src\player\race.c" />
+    <ClCompile Include="src\player\spell.c" />
+    <ClCompile Include="src\player\timed.c" />
+    <ClCompile Include="src\prefs.c" />
+    <ClCompile Include="src\quest.c" />
+    <ClCompile Include="src\randname.c" />
+    <ClCompile Include="src\save.c" />
+    <ClCompile Include="src\savefile.c" />
+    <ClCompile Include="src\score.c" />
+    <ClCompile Include="src\signals.c" />
+    <ClCompile Include="src\spells1.c" />
+    <ClCompile Include="src\spells2.c" />
+    <ClCompile Include="src\squelch.c" />
+    <ClCompile Include="src\store.c" />
+    <ClCompile Include="src\tables.c" />
+    <ClCompile Include="src\target.c" />
+    <ClCompile Include="src\trap.c" />
+    <ClCompile Include="src\ui-birth.c" />
+    <ClCompile Include="src\ui-event.c" />
+    <ClCompile Include="src\ui-knowledge.c" />
+    <ClCompile Include="src\ui-menu.c" />
+    <ClCompile Include="src\ui-options.c" />
+    <ClCompile Include="src\ui-spell.c" />
+    <ClCompile Include="src\ui.c" />
+    <ClCompile Include="src\util.c" />
+    <ClCompile Include="src\variable.c" />
+    <ClCompile Include="src\win\readdib.c" />
+    <ClCompile Include="src\win\readpng.c" />
+    <ClCompile Include="src\win\scrnshot.c" />
+    <ClCompile Include="src\win\win-layout.c" />
+    <ClCompile Include="src\wiz-spoil.c" />
+    <ClCompile Include="src\wiz-stats.c" />
+    <ClCompile Include="src\wizard.c" />
+    <ClCompile Include="src\x-spell.c" />
+    <ClCompile Include="src\xtra2.c" />
+    <ClCompile Include="src\xtra3.c" />
+    <ClCompile Include="src\z-bitflag.c" />
+    <ClCompile Include="src\z-file.c" />
+    <ClCompile Include="src\z-form.c" />
+    <ClCompile Include="src\z-msg.c" />
+    <ClCompile Include="src\z-quark.c" />
+    <ClCompile Include="src\z-queue.c" />
+    <ClCompile Include="src\z-rand.c" />
+    <ClCompile Include="src\z-set.c" />
+    <ClCompile Include="src\z-term.c" />
+    <ClCompile Include="src\z-textblock.c" />
+    <ClCompile Include="src\z-type.c" />
+    <ClCompile Include="src\z-util.c" />
+    <ClCompile Include="src\z-virt.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\win\angband.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
